@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Switch toggle</title>
+	<link rel="stylesheet" href="style.css">
+	<style>
+		
+	</style>
+
+</head>
+
+<body id="body-theme">
+	<header>
+		<nav>
+			<ul>
+				<li><a href="javscript:void(0)" id="btn-home">Home</a></li>
+				<li><a href="javscript:void(0)" id="btn-about">About</a></li>
+				<li><a href="javascript:void(0)" id="btn-login">Login</a></li>
+			</ul>
+		</nav>
+		<div class="toggle">
+			<label class="switch">
+				<input type="checkbox" onclick="switchTheme(this)">
+				<span class="slider round"></span>
+			</label>
+		</div>
+		<div class="logout">
+			<a href="javascript:void(0)" id="btn-logout" class="btn hijau">Log out</a>
+		</div>
+	</header>
+	<div id="user">
+		<div class="judul">
+			<h1>
+				Wellcome to galling shop
+			</h1>
+		</div>
+		<div class="container about">
+			<h1>
+				About to galling shop
+			</h1>
+		</div>
+		<div id="login" class="container">
+			<div class="col-6 mx-auto">
+				<input type="text" id="txtusername" class="form-control" placeholder="Username">
+				<input type="password" id="txtpassword" class="form-control bg-green" placeholder="Password">
+				<button type="button" onclick="login()" class="btn gradient-blue">Sign In</button>
+			</div>
+		</div>
+	</div>
+	<div id="admin">
+		<div class="container">
+			<div class="p-1">
+				<h1>Selamat datang admin!</h1>
+			</div>
+			<div class="col-6 mx-auto">
+				<input type="text" id="nama" class="form-control" placeholder="Nama Produk">
+				<input type="number" id="harga" class="form-control" placeholder="Harga">
+				<input type="text" id="desk" class="form-control" placeholder="Deskripsi">
+				<label for="upload" class="btn yellows">
+					File
+					<input type="file" class="d-none" id="upload" onchange="readFile(this)">
+				</label>
+				<br>
+				<button type="button" onclick="tambahData()" class="btn primary">Simpan data</button>
+			</div>
+			<label id="lblnama"></label>
+			<label id="lblharga"></label>
+			<label id="lbldesk"></label>
+			<img src="" alt="" id="gambar">
+		</div>
+	</div>
+	<script src="switch.js"></script>
+</body>
+
+</html>
